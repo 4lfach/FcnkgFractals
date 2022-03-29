@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="FckngFractals.Views.BinaryTreeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Row="0" Grid.Column="0" Background="Black"
+                Width="{Binding PointX, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                Height="{Binding PointY, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"></Canvas>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="length: " Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="10"/>
+            <TextBox Width="80" Height="20" Grid.Column="1" Margin="0 0 10 0"
+                     Text="{Binding Length, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="depth:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="10"/>
+            <TextBox Width="80" Height="20" Grid.Row="1" Grid.Column="1" Margin="0 0 10 0"
+                     Text="{Binding Depth, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="scale: " Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="10"/>
+            <TextBox Width="80" Height="20" Grid.Row="2" Grid.Column="1" Margin="0 0 10 0"
+                     Text="{Binding Scale, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="angle: " Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="10"/>
+            <TextBox Width="80" Height="20" Grid.Row="3" Grid.Column="1" Margin="0 0 10 0"
+                     Text="{Binding Angle, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock x:Name="depthLabel" Grid.ColumnSpan="2" Grid.Row="4"/>
+
+            <Button Grid.Row="5" Grid.ColumnSpan="2"
+                    Width="100" Height="50" Content="Generate"/>
+        </Grid>
+    </Grid>
+</UserControl>
