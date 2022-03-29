@@ -18,5 +18,5 @@ Fckng Fractals uses only WPF .Net 6.0
 FckngFractals requires Visual Studio 2021 to run.
 (My bad, I can not create exe files...)
 
-##Future Updates
+## Future Updates
 If I'm still in the mood, maybe another types of fractals will be added)))
