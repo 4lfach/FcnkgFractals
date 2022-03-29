@@ -1,0 +1,17 @@
+﻿<Application x:Class="FckngFractals.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FckngFractals"
+             xmlns:viewmodels="clr-namespace:FckngFractals.ViewModels"
+             xmlns:views="clr-namespace:FckngFractals.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewmodels:BinaryTreeViewModel}">
+                <views:BinaryTreeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:SnowflakeViewModel}">
+                <views:SnowflakeView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
